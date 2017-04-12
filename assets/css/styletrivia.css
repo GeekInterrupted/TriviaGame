@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/* Body */
+body {
+	font-family: 'Oswald', 'Fjalla One', Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+/* Container */
+.container {
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1000px;
+	background-color: #FFFFFF;
+}
+#answers-container {
+	text-align: center;
+	height: auto;
+	width: auto;
+}
+
+header {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: url(../images/filmbg.png);
+    margin-top: 0px;
+}
+h1 {
+	text-align: center;
+	font-size: 2em;
+	color: #CCD2DE;
+}
+#clock-of-death {
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: red;
+  text-align: center;
+
+	
+}
+#trivia-container .question {
+	font-family: "Oswald", arial, sans-serif;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	color: #9B0000;
+	text-align: center;
+}
+
+#button-next {
+	margin: auto;
+	color: #D7D7D7;
+	font-family: "Oswald", arial, sans-serif;
+	font-size: 1.75em;
+	background-color: #3A3A3A;
+	letter-spacing: 2px;
+	text-align: center;
+	height: 25px;
+	width: 350px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	border: medium solid #031E00;
+}
+#player-stats {
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 1.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: red;
+  text-align: center;
+}
+#correct-answers {
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 1.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: red;
+  text-align: center;
+}
+#wrong-answers {
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 1.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: red;
+  text-align: center;
+}
+#result {
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 1.25em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: red;
+  text-align: center;
+}
+
+
+ul li {
+	list-style: none;
+/*	float: left;*/
+	font-family: "Oswald", arial, sans-serif;
+  	font-size: 20px;
+  	padding-top: 15px;
+ 	padding-bottom: 15px;
+	padding-right: 10px;
+  color: #9F9F9F;
+  text-align: center;
+/*	display:block;*/
+	text-decoration: none;
+}
+ul li:hover a {
+	color: #2C9AB7;
+
+}
+.button {
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+.button:hover {
+	background-color: #FEFEFE;
+	color: #C4C4C4;
+	cursor: pointer;
+}
+.hidden {
+	display: none;
+}
+
+.containerclearfloat {
+	
+	display: inline-block;
+	clear: both;
+	height: 10px;
+	width: auto;
+}

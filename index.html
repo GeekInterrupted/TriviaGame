@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Trivia Game - Homework week 5 - Olga O'Neal</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Fjalla+One|Oswald" rel="stylesheet">
+<link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+<link href="assets/css/styletrivia.css" rel="stylesheet" type="text/css">
+  
+</head>
+
+<body>
+<div class="container">
+<header> <h1>MOVIE QUOTES TRIVIA GAME</h1></header>
+ 
+  <div id="trivia-container">
+  
+  <div id="clock-of-death">TIME LEFT: </div>
+  <div id="start-button"><h1>start</h1></div> 
+  <div class="question"></div>
+  <div id="answers-container">
+  
+    <ul class="choice-list">
+        <li>choice 01</li>
+        <li>choice 02</li>
+        <li>choice 03</li>
+        <li>choice 04</li>
+    </ul>
+    
+   </div> <!--answers container-->
+   <div class="containerclearfloat"></div>
+   <div class="triviaMessage"></div>
+   <div id="button-next">NEXT QUESTION</div>
+<!--   <div id="player-stats">NOT ANSWERED: 0</div>-->
+   <div id="correct-answers">CORRECT ANSWERS: 0</div>
+   <div id="wrong-answers">WRONG ANSWERS: 0</div>
+   <div id="result">YOU SCORED</div>
+
+   
+
+    </div> <!--end trivia-container -->  
+</div> <!--end main container -->
+
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">   
+
+
+    
+$(document).ready(function(){
+//variables for the trivia
+var currentQuestion = 0;
+var correctAnswers = 0;
+var wrongAnswers = 0;
+var triviaOver = false;
+var notAnswered = 0;
+var totalQuestions = 6;
+    
+//add questions for trivia game
+
+var questionsDataBank = [{
+	question: "On Wednesdays, we wear pink",
+    choices: ["The Godfather", "Poltergeist", "Mean Girls", "Conan The Barbarian"],
+    correctAnswer: 2
+}, {
+	question: "Gentlemen, you can't fight in here! This is a war room",
+	choices: ["Goldfinger", "Xanadu", "The Shining", "Dr. Strangelove, or How I Learned to Stop Worrying and Love the Bomb"],
+	correctAnswer: 3
+}, {
+	question: "Mrs. Robinson, you're trying to seduce me. Aren't you?",
+	choices: ["Dr. No", "Jaws", "The Graduate", "Jurassic Park"],
+	correctAnswer: 2
+}, {
+	question: "Yo, Adrian",
+	choices: ["Planet of the Apes", "The Big Lebowsky", "Wolverine", "Rocky"],
+	correctAnswer: 3
+}, {
+	question: "Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!",
+	choices: ["The Treasure of Sierra Madre", "Casablanca", "Saturday Night Fever", "Meet the Gringo"],
+	correctAnswer: 0
+}, {
+	question: "So come up to the lab and see what's on the slab. I see you shiver with antici... pation.",
+	choices: ["Independence Day", "The Rocky Horror Picture Show", "Grease", "Dumbo"],
+	correctAnswer: 1
+}];
+//just making sure this pesky objects work  
+	for (var i=0; i<questionsDataBank.length; i++) {
+		console.log(questionsDataBank[i]);  
+} 
+    
+    
+    
+
+
+//create a timer to start the game set to 30, use a countdown that will stop when the time runs out
+ 
+var j = 30;
+var countDown = function() {
+    var timeOut = setInterval(function() {
+        $("#clock-of-death").text("TIME LEFT " + j);
+        j--;
+        //making sure the countdown works
+        console.log(j);
+                if (j === 0) {
+            j = 30;
+            clearInterval(timeOut);
+             
+        }
+    },1000);
+     
+}   
+
+//this function will input the questions in the page (if I can get it to work)
+function startTrivia() {
+    alert("we're starting");
+    
+}
+
+//this is the function that calls all the functions inside the main start button    
+function startGame() {
+    startTrivia();
+    countDown();
+}
+    
+    
+//this is the main button that will start the game and the timer     
+$("#start-button").click(startGame);
+    console.log("start the game!");
+        
+
+
+
+	   
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+}); //end document ready
+
+
+
+    
+    
+    
+
+        
+
+</script>     
+        
+</body>
+
+</html>
